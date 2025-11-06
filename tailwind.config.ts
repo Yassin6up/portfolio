@@ -52,6 +52,7 @@ export default {
           border: "var(--destructive-border)",
         },
         ring: "hsl(var(--ring) / <alpha-value>)",
+        neon: "hsl(var(--neon-green) / <alpha-value>)",
         chart: {
           "1": "hsl(var(--chart-1) / <alpha-value>)",
           "2": "hsl(var(--chart-2) / <alpha-value>)",
@@ -86,6 +87,8 @@ export default {
         sans: ["var(--font-sans)"],
         serif: ["var(--font-serif)"],
         mono: ["var(--font-mono)"],
+        heading: ["Poppins", "Montserrat", "sans-serif"],
+        body: ["Open Sans", "Roboto", "sans-serif"],
       },
       keyframes: {
         "accordion-down": {
