@@ -176,17 +176,17 @@ export default function HeroSection() {
           <Button
             size="lg"
             onClick={scrollToWork}
-            className="hero-button bg-neon hover:bg-neon/90 text-primary-foreground gap-2 text-base sm:text-lg px-8 py-6 rounded-xl shadow-lg shadow-neon/30 hover:shadow-neon/50 transition-all duration-300"
+            className=" bg-neon hover:bg-neon/90 text-primary-foreground gap-2 text-base sm:text-lg px-8 py-6 rounded-xl shadow-lg shadow-neon/30 hover:shadow-neon/50 transition-all duration-300"
             data-testid="button-view-work"
           >
-            {t('hero.cta1')}
+            {t('hero.cta1')} 
             <ArrowRight className="h-5 w-5" />
           </Button>
           <Button
             size="lg"
             variant="outline"
             onClick={scrollToContact}
-            className="hero-button border-2 border-neon text-neon hover:bg-neon/10 text-base sm:text-lg px-8 py-6 rounded-xl backdrop-blur-sm"
+            className=" border-2 border-neon text-neon hover:bg-neon/10 text-base sm:text-lg px-8 py-6 rounded-xl backdrop-blur-sm"
             data-testid="button-contact"
           >
             {t('hero.cta2')}

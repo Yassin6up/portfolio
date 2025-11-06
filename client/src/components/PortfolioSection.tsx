@@ -19,35 +19,35 @@ const projects = [
     title: 'E-Commerce Mobile App',
     description: 'Full-featured shopping app with payment integration and real-time inventory',
     image: mobileApp1,
-    category: 'mobile',
+    category: ['mobile', 'backend', 'fullstack'],
     tech: ['React Native', 'Node.js', 'MySQL'],
   },
   {
     title: 'Analytics Dashboard',
     description: 'Real-time analytics platform with interactive data visualization',
     image: webDashboard,
-    category: 'web',
+    category: ['web', 'backend', 'fullstack'],
     tech: ['React.js', 'Express.js', 'Charts.js'],
   },
   {
     title: 'Fitness Tracker App',
     description: 'Track workouts, nutrition, and progress with AI-powered insights',
     image: mobileApp2,
-    category: 'mobile',
+    category: ['mobile', 'backend', 'fullstack'],
     tech: ['React Native', 'Expo', 'Firebase'],
   },
   {
     title: 'Restaurant Ordering System',
     description: 'Online food ordering platform with menu management and delivery tracking',
     image: webRestaurant,
-    category: 'fullstack',
+    category: ['web', 'backend', 'fullstack'],
     tech: ['React.js', 'Node.js', 'MySQL'],
   },
   {
     title: 'Real Estate Platform',
     description: 'Property listing and search platform with advanced filters and maps',
     image: webRealEstate,
-    category: 'web',
+    category: ['web', 'backend', 'fullstack'],
     tech: ['React.js', 'Express.js', 'PostgreSQL'],
   },
 ];
@@ -62,7 +62,7 @@ export default function PortfolioSection() {
 
   const filteredProjects = activeCategory === 'all'
     ? projects
-    : projects.filter(p => p.category === activeCategory);
+    : projects.filter(p => p.category.includes(activeCategory));
 
   useEffect(() => {
     if (inView && sectionRef.current) {
@@ -176,15 +176,28 @@ export default function PortfolioSection() {
                     </Badge>
                   ))}
                 </div>
+
+                <div className="flex flex-wrap gap-1 mb-4">
+                  {project.category.map((cat, catIndex) => (
+                    <Badge 
+                      key={catIndex} 
+                      variant="outline" 
+                      className="text-xs border-neon text-neon"
+                      data-testid={`badge-category-${index}-${catIndex}`}
+                    >
+                      {cat}
+                    </Badge>
+                  ))}
+                </div>
                 
-                <Button
+                {/* <Button
                   size="sm"
                   className="bg-neon hover:bg-neon/90 text-primary-foreground gap-2"
                   data-testid={`button-view-project-${index}`}
                 >
                   {t('portfolio.viewProject')}
                   <ExternalLink className="h-4 w-4" />
-                </Button>
+                </Button> */}
               </div>
             </div>
           ))}

@@ -17,21 +17,46 @@ export default function ContactSection() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    console.log('Contact form submitted:', formData);
-    
-    setTimeout(() => {
+
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  setIsSubmitting(true);
+  
+  try {
+    const response = await fetch('https://formspree.io/f/xovpgrjb', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+        _subject: `New message from ${formData.name}`
+      }),
+    });
+
+    if (response.ok) {
       toast({
         title: 'Message Sent!',
         description: 'Thank you for reaching out. I will get back to you soon.',
       });
       setFormData({ name: '', email: '', message: '' });
-      setIsSubmitting(false);
-    }, 1000);
-  };
+    } else {
+      throw new Error('Failed to send message');
+    }
+    
+  } catch (error) {
+    console.error('Error sending email:', error);
+    toast({
+      title: 'Error',
+      description: 'Failed to send message. Please try again.',
+      variant: 'destructive',
+    });
+  } finally {
+    setIsSubmitting(false);
+  }
+};
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData(prev => ({
@@ -41,9 +66,9 @@ export default function ContactSection() {
   };
 
   const socialLinks = [
-    { icon: SiLinkedin, href: 'https://linkedin.com', label: 'LinkedIn', color: '#0A66C2' },
-    { icon: SiGithub, href: 'https://github.com', label: 'GitHub', color: '#181717' },
-    { icon: SiWhatsapp, href: 'https://wa.me', label: 'WhatsApp', color: '#25D366' },
+    { icon: SiLinkedin, href: 'https://www.linkedin.com/in/yassin-ait-elhardouf-676974247/', label: 'LinkedIn', color: '#0A66C2' },
+    { icon: SiGithub, href: 'https://github.com/Yassin6up', label: 'GitHub', color: '#181717' },
+    { icon: SiWhatsapp, href: 'https://wa.link/t0haaz', label: 'WhatsApp', color: '#25D366' },
   ];
 
   return (

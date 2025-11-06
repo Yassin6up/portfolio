@@ -12,10 +12,11 @@ export default function Footer() {
     { key: 'contact', href: '#contact' },
   ];
 
+
   const socialLinks = [
-    { icon: SiLinkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-    { icon: SiGithub, href: 'https://github.com', label: 'GitHub' },
-    { icon: SiWhatsapp, href: 'https://wa.me', label: 'WhatsApp' },
+    { icon: SiLinkedin, href: 'https://www.linkedin.com/in/yassin-ait-elhardouf-676974247/', label: 'LinkedIn', color: '#0A66C2' },
+    { icon: SiGithub, href: 'https://github.com/Yassin6up', label: 'GitHub', color: '#181717' },
+    { icon: SiWhatsapp, href: 'https://wa.link/t0haaz', label: 'WhatsApp', color: '#25D366' },
   ];
 
   const handleNavClick = (href: string) => {

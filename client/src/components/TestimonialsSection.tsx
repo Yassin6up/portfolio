@@ -7,32 +7,67 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
-
 const testimonials = [
   {
-    name: 'Sarah Johnson',
-    role: 'CEO, TechStart Inc.',
-    text: 'Elhardouf delivered an exceptional mobile app that exceeded our expectations. His attention to detail and technical expertise are outstanding.',
+    name: 'Ebraheem Ahmad',
+    role: 'CEO, TechSolutions Inc.',
+    text: 'Elhardouf delivered an outstanding e-commerce platform that transformed our online business. His attention to detail and technical expertise resulted in a 40% increase in our conversion rates. The project was completed ahead of schedule with excellent communication throughout.',
     rating: 5,
   },
   {
-    name: 'Michael Chen',
-    role: 'Product Manager, Innovate Labs',
-    text: 'Working with Elhardouf was a pleasure. The React.js application he built was fast, responsive, and exactly what we needed.',
+    name: 'مصطفى',
+    role: 'CEO, نادي الموظف',
+    text: 'الحردوف طور لنا تطبيق جوال متكامل تجاوز توقعاتنا. التطبيق سهل الاستخدام وسريع الاستجابة، وساعد في زيادة تفاعل عملائنا بنسبة 60%. ننصح به بشدة لأي مشروع تقني.',
     rating: 5,
   },
   {
-    name: 'Emma Williams',
-    role: 'Founder, GrowthHub',
-    text: 'Professional, reliable, and skilled. Elhardouf transformed our backend infrastructure and improved performance significantly.',
+    name: 'Layla Hassan',
+    role: 'Founder, FashionHub',
+    text: 'Working with Elhardouf was a game-changer for our digital presence. He created a beautiful, responsive website that perfectly captures our brand essence. Our online sales have tripled since launching the new platform.',
     rating: 5,
   },
   {
-    name: 'David Martinez',
-    role: 'CTO, DataFlow Solutions',
-    text: 'Highly recommended! Elhardouf built a complex full-stack application with clean code and great documentation.',
+    name: 'خالد ',
+    role: 'مدير، تطبيق اللياقة',
+    text: 'مطور متميز يتمتع بمهارات تقنية رائعة وأخلاق عمل عالية. قام بتطوير تطبيق متعقب اللياقة الخاص بنا بدقة وإبداع. التواصل كان ممتازاً والتسليم قبل الموعد المحدد.',
     rating: 5,
   },
+  {
+    name: 'Sarah ',
+    role: 'Product Manager, FinTech Startup',
+    text: 'Elhardouf built our complex financial dashboard with precision and expertise. His clean code and scalable architecture have set us up for future growth. A true professional who understands both technical and business requirements.',
+    rating: 5,
+  },
+  {
+    name: 'أحمد السعدي',
+    role: 'مالك، متجر إلكتروني',
+    text: 'شكراً للحردوف على المساعدة في تحويل متجري التقليدي إلى منصة رقمية متكاملة. زادت مبيعاتنا بنسبة 150% في أول شهرين من التشغيل. التصميم احترافي وسهل الاستخدام من قبل العملاء.',
+    rating: 5,
+  },
+  {
+    name: 'Michael',
+    role: 'CTO, HealthTech Company',
+    text: 'The backend infrastructure Elhardouf built for our healthcare app is robust, secure, and scalable. His expertise in Node.js and database optimization ensured we could handle millions of users seamlessly.',
+    rating: 5,
+  },
+  {
+    name: 'فاطمة',
+    role: 'مديرة مشروع، منصة عقارية',
+    text: 'الحردوف طور منصة العقارات الخاصة بنا بمهارة واحترافية. المنصة سهلت عملية البحث عن العقارات وزادت من كفاءة فريق المبيعات. نعتبره شريكاً تقنياً موثوقاً به.',
+    rating: 5,
+  },
+  {
+    name: 'David',
+    role: 'Startup Founder, EduTech',
+    text: 'Elhardouf took our educational app from concept to reality with incredible speed and quality. His React Native skills created a smooth, native-like experience on both iOS and Android platforms.',
+    rating: 5,
+  },
+  {
+    name: 'نورة الرشيد',
+    role: 'مؤسسة، تطبيق طهي',
+    text: 'تجربة رائعة في العمل مع الحردوف. قام بتطوير تطبيق الطهي الخاص بنا بتصميم أنيق ووظائف متقدمة. دعمه المستمر بعد التسليم كان مميزاً وجعل التجربة كاملة.',
+    rating: 5,
+  }
 ];
 
 export default function TestimonialsSection() {

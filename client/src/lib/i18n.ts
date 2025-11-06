@@ -16,8 +16,10 @@ const resources = {
       hero: {
         greeting: "Hi, I'm Elhardouf",
         title: 'I Build Apps & Websites',
+        scrollDown: 'Scroll Down',
         subtitle: 'Freelance Developer | React Native, React.js, Express.js | Turning Ideas Into Digital Reality',
         cta1: 'View My Work',
+        badge: "Open for Freelance Projects",
         cta2: 'Contact Me'
       },
       about: {
@@ -29,7 +31,11 @@ const resources = {
         title: 'My Skills',
         subtitle: 'Technologies I work with',
         years: 'years',
-        projects: 'projects'
+        projects: 'projects' ,
+        stat1: 'Projects Completed',
+        stat2: 'Experience',
+        stat3: 'Secure Code',
+        stat4: 'Themes Developed'
       },
       portfolio: {
         title: 'Featured Projects',
@@ -45,6 +51,7 @@ const resources = {
       services: {
         title: 'Services',
         subtitle: 'What I offer',
+        learnMore: 'Learn More',
         mobile: {
           title: 'Mobile Apps Development',
           items: ['React Native Apps', 'Expo Development', 'Cross-platform Solutions', 'App Store Deployment']
@@ -100,8 +107,10 @@ const resources = {
       hero: {
         greeting: 'مرحباً، أنا الحردوف',
         title: 'أبني التطبيقات والمواقع',
+        scrollDown: 'انتقل للأسفل',
         subtitle: 'مطور مستقل | React Native, React.js, Express.js | تحويل الأفكار إلى واقع رقمي',
         cta1: 'عرض أعمالي',
+        badge: "مستعد للمشاريع المستقلة",
         cta2: 'تواصل معي'
       },
       about: {
@@ -113,7 +122,11 @@ const resources = {
         title: 'مهاراتي',
         subtitle: 'التقنيات التي أعمل بها',
         years: 'سنوات',
-        projects: 'مشاريع'
+        projects: 'مشاريع',
+        stat1: 'المشاريع المكتملة',
+        stat2: 'سنوات الخبرة',
+        stat3: 'كود آمن',
+        stat4: 'ثيمات مطورة'
       },
       portfolio: {
         title: 'المشاريع المميزة',
@@ -122,13 +135,14 @@ const resources = {
         mobile: 'تطبيقات الجوال',
         web: 'المواقع',
         backend: 'الخلفية',
-        fullstack: 'Full Stack',
+        fullstack: 'كامل المكدس',
         viewProject: 'عرض المشروع',
         liveDemo: 'معاينة مباشرة'
       },
       services: {
         title: 'الخدمات',
         subtitle: 'ما أقدمه',
+        learnMore: 'اعرف المزيد',
         mobile: {
           title: 'تطوير تطبيقات الجوال',
           items: ['تطبيقات React Native', 'تطوير Expo', 'حلول متعددة المنصات', 'نشر في متجر التطبيقات']
