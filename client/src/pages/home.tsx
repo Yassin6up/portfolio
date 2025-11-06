@@ -1,4 +1,5 @@
 import ThreeBackground from '@/components/ThreeBackground';
+import PhoenixBird from '@/components/PhoenixBird';
 import Navigation from '@/components/Navigation';
 import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
@@ -13,6 +14,7 @@ export default function Home() {
   return (
     <div className="relative min-h-screen">
       <ThreeBackground />
+      <PhoenixBird />
       <Navigation />
       <HeroSection />
       <AboutSection />

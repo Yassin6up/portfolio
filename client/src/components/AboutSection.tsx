@@ -27,35 +27,52 @@ export default function AboutSection() {
 
   useEffect(() => {
     if (inView && sectionRef.current) {
-      gsap.from(sectionRef.current.querySelector('.about-image'), {
-        opacity: 0,
-        x: -100,
-        duration: 1,
+      const tl = gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,
           start: 'top 80%',
         },
       });
 
-      gsap.from(sectionRef.current.querySelector('.about-content'), {
+      tl.from(sectionRef.current.querySelector('.about-image'), {
+        opacity: 0,
+        x: -100,
+        rotateY: -30,
+        duration: 1.2,
+        ease: 'power3.out',
+      })
+      .from(sectionRef.current.querySelector('.about-content'), {
         opacity: 0,
         x: 100,
         duration: 1,
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: 'top 80%',
-        },
-      });
-
-      gsap.from(sectionRef.current.querySelectorAll('.tech-icon'), {
+        ease: 'power3.out',
+      }, '-=0.8')
+      .from(sectionRef.current.querySelector('.about-title'), {
+        opacity: 0,
+        y: 30,
+        duration: 0.8,
+      }, '-=0.6')
+      .from(sectionRef.current.querySelector('.about-description'), {
+        opacity: 0,
+        y: 20,
+        duration: 0.6,
+      }, '-=0.4')
+      .from(sectionRef.current.querySelectorAll('.tech-icon'), {
         opacity: 0,
         scale: 0,
+        rotation: 180,
+        stagger: 0.08,
+        duration: 0.6,
+        ease: 'back.out(1.7)',
+      }, '-=0.3');
+
+      gsap.to(sectionRef.current.querySelectorAll('.tech-icon'), {
+        y: -10,
+        duration: 2,
         stagger: 0.1,
-        duration: 0.5,
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: 'top 60%',
-        },
+        repeat: -1,
+        yoyo: true,
+        ease: 'sine.inOut',
       });
     }
   }, [inView]);
@@ -89,10 +106,10 @@ export default function AboutSection() {
           </div>
 
           <div className="about-content">
-            <h2 className="text-4xl sm:text-5xl font-heading font-bold mb-6" data-testid="text-about-title">
+            <h2 className="about-title text-4xl sm:text-5xl font-heading font-bold mb-6" data-testid="text-about-title">
               <span className="text-neon">{t('about.title')}</span>
             </h2>
-            <p className="text-lg text-muted-foreground mb-8 leading-relaxed font-body" data-testid="text-about-description">
+            <p className="about-description text-lg text-muted-foreground mb-8 leading-relaxed font-body" data-testid="text-about-description">
               {t('about.description')}
             </p>
 

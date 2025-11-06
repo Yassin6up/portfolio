@@ -87,8 +87,8 @@ export default {
         sans: ["var(--font-sans)"],
         serif: ["var(--font-serif)"],
         mono: ["var(--font-mono)"],
-        heading: ["Poppins", "Montserrat", "sans-serif"],
-        body: ["Open Sans", "Roboto", "sans-serif"],
+        heading: ["Orbitron", "Cairo", "sans-serif"],
+        body: ["Cairo", "system-ui", "sans-serif"],
       },
       keyframes: {
         "accordion-down": {

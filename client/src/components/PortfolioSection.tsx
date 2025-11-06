@@ -66,11 +66,36 @@ export default function PortfolioSection() {
 
   useEffect(() => {
     if (inView && sectionRef.current) {
+      gsap.from(sectionRef.current.querySelector('.portfolio-header'), {
+        opacity: 0,
+        y: -50,
+        duration: 1,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: 'top 80%',
+        },
+      });
+
+      gsap.from(sectionRef.current.querySelectorAll('.filter-button'), {
+        opacity: 0,
+        scale: 0.5,
+        stagger: 0.08,
+        duration: 0.5,
+        ease: 'back.out(1.7)',
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: 'top 75%',
+        },
+      });
+
       gsap.from(sectionRef.current.querySelectorAll('.project-card'), {
         opacity: 0,
-        y: 80,
+        y: 100,
+        rotateX: -20,
         stagger: 0.15,
-        duration: 0.8,
+        duration: 1,
+        ease: 'power3.out',
         scrollTrigger: {
           trigger: sectionRef.current,
           start: 'top 70%',
@@ -94,22 +119,24 @@ export default function PortfolioSection() {
       data-testid="section-portfolio"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl sm:text-5xl font-heading font-bold mb-4" data-testid="text-portfolio-title">
-            <span className="text-neon">{t('portfolio.title')}</span>
+        <div className="text-center mb-16 portfolio-header">
+          <h2 className="text-5xl sm:text-6xl font-heading font-bold mb-6" data-testid="text-portfolio-title">
+            <span className="bg-gradient-to-r from-neon to-primary bg-clip-text text-transparent">
+              {t('portfolio.title')}
+            </span>
           </h2>
-          <p className="text-xl text-muted-foreground font-body" data-testid="text-portfolio-subtitle">
+          <p className="text-xl text-muted-foreground font-body max-w-2xl mx-auto" data-testid="text-portfolio-subtitle">
             {t('portfolio.subtitle')}
           </p>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
+        <div className="flex flex-wrap justify-center gap-3 mb-16">
           {categories.map((category) => (
             <Button
               key={category}
               variant={activeCategory === category ? 'default' : 'outline'}
               onClick={() => setActiveCategory(category)}
-              className={activeCategory === category ? 'bg-neon hover:bg-neon/90 text-primary-foreground' : 'border-neon text-neon hover:bg-neon/10'}
+              className={`filter-button ${activeCategory === category ? 'bg-neon hover:bg-neon/90 text-primary-foreground shadow-lg shadow-neon/30' : 'border-neon text-neon hover:bg-neon/10'}`}
               data-testid={`button-filter-${category}`}
             >
               {t(`portfolio.${category}`)}
