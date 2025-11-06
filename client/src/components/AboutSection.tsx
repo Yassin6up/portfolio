@@ -4,7 +4,7 @@ import { useInView } from 'react-intersection-observer';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { SiReact, SiNodedotjs, SiExpress, SiMysql, SiJavascript, SiTypescript, SiTailwindcss, SiGit } from 'react-icons/si';
-import profileImage from '@assets/generated_images/profile.png';
+import profileImage from '../../public/profile.png';
 
 gsap.registerPlugin(ScrollTrigger);
 

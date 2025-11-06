@@ -1,0 +1,165 @@
+Build a professional, modern, and animated freelance developer portfolio website for a developer named Elhardouf. The website should:
+
+General Requirements:
+
+Sleek, modern, and techy design, friendly and professional.
+
+Responsive design (desktop + tablet + mobile).
+
+Smooth scrolling animations using GSAP (scroll triggers, fade-ins, slide-in sections).
+
+Parallax effect for background images and hero section.
+
+Support multilingual translation: English (default) + Arabic. Include a toggle button for language.
+
+Use modern tech colors:
+
+Primary: Dark Blue (#0B1F3F)
+
+Accent: Neon Green (#00FF94)
+
+Light: White (#FFFFFF)
+
+Optional gradients for buttons and hover effects.
+
+Modern fonts: Montserrat / Poppins for headings, Roboto / Open Sans for body.
+
+Smooth animations: fade-ins, slide-ups, hover transitions for buttons and project cards.
+
+Sections and Content:
+
+1. Hero Section:
+
+Full screen background with parallax effect (maybe subtle code lines or abstract shapes).
+
+Big heading: “Hi, I’m Elhardouf – I Build Apps & Websites.”
+
+Subheading: “Freelance Developer | React Native, React.js, Express.js | Turning Ideas Into Digital Reality.”
+
+Call-to-action buttons: “View My Work” + “Contact Me.”
+
+Optional small animated element: blinking cursor effect, code snippet typing animation.
+
+2. About Me Section:
+
+Short paragraph introducing yourself as a freelancer.
+
+Include a profile picture (optional).
+
+Tech stack icons or animated skill bars: React Native, React.js, Expo, Node.js, Express.js, MySQL, and other relevant tools.
+
+Include subtle GSAP animations on scroll (fade-in from left or right).
+
+3. Skills Section:
+
+Animated circular progress bars or bars showing skill proficiency.
+
+Each skill (React Native, React.js, Express.js, Node.js, etc.) should animate on scroll.
+
+Include a small interactive effect on hover (tooltip with experience years or project count).
+
+4. Portfolio / Projects Section:
+
+Grid or carousel layout with project cards.
+
+Each project card includes:
+
+Project title
+
+Short description
+
+Tech stack icons
+
+Screenshot / mockup
+
+Button: “View Project” or “Live Demo”
+
+Use GSAP scroll animations: cards slide in from bottom/fade in on scroll.
+
+Optional filter by project type: Mobile Apps / Websites / Backend / Full Stack.
+
+5. Services Section:
+
+Highlight services you offer:
+
+Mobile Apps Development (React Native, Expo)
+
+Web Development (React.js, Express.js)
+
+Backend & API (Node.js, Express.js, MySQL)
+
+Consulting / Maintenance / Scaling
+
+Each service card should have hover animation and slight scale effect.
+
+6. Testimonials Section (Optional):
+
+Carousel with client reviews or short quotes.
+
+Animated fade-in / slide-in using GSAP.
+
+7. Contact Section:
+
+Simple form: Name, Email, Message.
+
+Multilingual labels (EN + AR).
+
+Social links: LinkedIn, GitHub, WhatsApp.
+
+Email displayed: hi@elhrdouf.com
+
+Button hover animations.
+
+8. Footer:
+
+Quick links: Home / About / Portfolio / Contact
+
+Copyright © 2025 Elhardouf.com
+
+Small “Designed & Developed by Me” signature.
+
+Extra Technical Requirements:
+
+Animations & Interactivity:
+
+Use GSAP for scroll animations, fade-ins, parallax, and hover effects.
+
+Smooth scrolling and easing effects.
+
+Translation / i18n:
+
+Use i18next or similar for Arabic + English.
+
+Ensure layout supports RTL when Arabic is selected.
+
+Responsive & Mobile Friendly:
+
+Hero section scales perfectly.
+
+Portfolio grid adapts to smaller screens.
+
+Performance:
+
+Lazy load portfolio images.
+
+Smooth animations without jank.
+
+Design Vibes:
+
+Modern, minimalist, tech-friendly.
+
+Clean sections with white/dark backgrounds, subtle neon highlights.
+
+Buttons: rounded corners, hover gradient.
+
+Subtle shadows for cards and portfolio elements.
+
+Smooth parallax for hero and background sections.
+
+💡 Optional Extras:
+
+Dark mode toggle
+
+Floating social media icons
+
+Animated background elements (e.g., particles, abstract shapes, or code snippets)
